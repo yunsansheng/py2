@@ -1,0 +1,19 @@
+#爬虫架构概览
+spider_main.py：爬虫主程序
+        html_downloader.py：网页下载器
+        html_outputer.py：内容输出器
+        html_parser.py：网页内容解析器
+        url_manager.py：url管理器
+
+一般情况修改如下：
+html_downloader.py：网页下载器，默认不需要修改
+url_manager.py：url管理器，默认不需要修改
+html_outputer.py：内容输出器  仅需修改需要的字段
+
+#==============分割线
+spider_main.py：爬虫主程序
+根据需要检查是否需要更改craw方法，比如限定条数，通用情况下也不需要修改。
+
+#**************以下需要修改
+html_parser.py：网页内容解析器
+定义获得url和获得data的方法  根据网页分析 url和data的规则
